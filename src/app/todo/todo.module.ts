@@ -5,7 +5,6 @@ import { ListadoComponent } from './listado/listado.component';
 import { FormsModule } from '@angular/forms';
 
 
-
 @NgModule({
   declarations: [
     EntradaComponent,
