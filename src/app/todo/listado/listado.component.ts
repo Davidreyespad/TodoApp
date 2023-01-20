@@ -20,5 +20,6 @@ export class ListadoComponent implements OnInit {
   }
   completada(tareaCompletada: string): void {
     this._tareas = this._tareas.filter((tarea) => tarea !== tareaCompletada);
+    this.servicioTareas.tareas = this._tareas;
   }
 }
