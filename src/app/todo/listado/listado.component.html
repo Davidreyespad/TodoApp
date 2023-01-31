@@ -1,9 +1,9 @@
 <h3 class="mt-4">Listado de tareas</h3>
-<h3 *ngIf="tareas.length > 0; else noTareas">Mis tareas</h3>
+<h3 *ngIf="tareas.length > 0; else noTareas">Mis alumnos y notas</h3>
 <div class="row">
   <!--   <h3 *ngIf="tareas.length > 0; else noTareas">Mis tareas</h3>-->
   <ng-template #noTareas>
-    <div class="alert alert-info" role="alert">No hay tareas</div>
+    <div class="alert alert-info" role="alert">No hay alumnos ni notas</div>
   </ng-template>
   <div class="list-group">
     <a

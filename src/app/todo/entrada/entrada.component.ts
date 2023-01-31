@@ -8,6 +8,7 @@ import { TareasService } from '../tareas.service';
 })
 export class EntradaComponent implements OnInit {
   private _tarea: string = "";
+  private _nota: any;
 
   constructor(private servicioTareas: TareasService){}
   ngOnInit(): void{
@@ -16,6 +17,8 @@ export class EntradaComponent implements OnInit {
     if(this._tarea !== '' ){
       this.servicioTareas.tareas.push(this._tarea);
       this._tarea = " ";
+      this.servicioTareas.tareas.push(this._nota);
+      this._nota = " ";
     }
   }
 
@@ -24,5 +27,11 @@ export class EntradaComponent implements OnInit {
   }
   get tarea(): string{
     return this._tarea;
+  }
+  set nota(nota: any){
+    this._nota = nota;
+  }
+  get nota(): any{
+    return this._nota;
   }
 }
